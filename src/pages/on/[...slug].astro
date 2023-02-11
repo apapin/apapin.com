@@ -1,0 +1,24 @@
+---
+import { CollectionEntry, getCollection } from 'astro:content';
+import BlogPost from '../../layouts/BlogPost.astro';
+import { getNumberOfWords, getReadingTime } from '../../utils/readingtime';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('essays');
+	return posts.map((post) => ({
+		params: { slug: post.slug },
+		props: post,
+	}));
+}
+type Props = CollectionEntry<'essays'>;
+
+const post = Astro.props;
+
+const render = await post.render();
+const passedProps = { ...post.data, ...render.remarkPluginFrontmatter};
+const { Content } = render;
+---
+
+<BlogPost {...passedProps}>
+	<Content />
+</BlogPost>

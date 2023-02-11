@@ -1,0 +1,46 @@
+---
+import HeaderLink from './HeaderLink.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<section class="sidebar"> 
+
+    <section class="callme">
+        <h3>Get to me</h3>
+        <p>Send me long paragraphs at me@alexandrepapin.name or on the <a href="https://twitter.com/charmide">Twitter</a>.
+    </section>
+
+    <!-- <section class="callme">
+        <h3>Recent musings</h3>
+        <ul>
+            <li>
+                product management
+            </li>
+            <li>
+                how hard should it be
+            </li>
+            <li>
+                writing things down
+            </li>
+        </ul>
+    </section> -->
+
+
+</section>
+<style>
+.sidebar {
+    border-right: 1px solid var(--ui-border-color);
+    background-color: var(--bg-darkest);
+    font-family: "IBM Plex Mono", monospace;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.callme {
+    padding: 1rem;
+    border-bottom: 1px solid var(--ui-border-color);
+    border-top: 1px solid var(--ui-border-color);
+}
+
+</style>
