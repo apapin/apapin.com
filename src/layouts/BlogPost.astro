@@ -3,9 +3,11 @@ import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Sidebar from '../components/Sidebar.astro';
+import slugify from '@sindresorhus/slugify';
 
 type Props = CollectionEntry<'essays'>['data'];
-const { title, description, pubDate, revDate, heroImage, numberOfWords, minutesRead } = Astro.props;
+const { title, description, pubDate, revDate, heroImage, numberOfWords, minutesRead, headings } = Astro.props;
+//console.log(Astro.props.headings);
 ---
 
 
@@ -37,16 +39,48 @@ const { title, description, pubDate, revDate, heroImage, numberOfWords, minutesR
 			<section class="contentwrapper">
 				<article>
 					{heroImage && <img width={720} height={360} src={heroImage} alt="" />}
-					<h1 class="title">{title}</h1>
+					<h1 class="title" id={slugify(title)}>{title}</h1>
 					<span class="subdued">
 						{pubDate && !revDate && <span>Written <time>{pubDate}</time></span>}
 						{pubDate && revDate && <span>Written <time>{pubDate}</time> · revised {revDate}</span>}
 						{<span>· {Math.floor(numberOfWords/100)/10}k words, {minutesRead}</span>}
 					</span>
 					<hr />
+					<div class="toc">
+						<ol>
+							{headings.map((heading) => (
+								<li><a href={"#"+heading.slug}>{heading.text}</a></li>
+							))}
+						</ol>
+					</div>
 					<slot />
+					<hr/>
+					<div class="go-up-container">
+						<a href={"#"+slugify(title)}>Go back up</a>
+					</div>
 				</article>
 			</section>
 		</main>
 	</body>
 </html>
+<style>
+.toc {
+	/* border: 1px solid red; */
+	width: 230px;
+	float: left;
+	margin-right: 20px;
+	padding: 5px;
+	background-color: var(--bg-alt);
+	border: 1px solid var(--separator-color);
+}
+
+.go-up-container {
+	display: flex;
+	padding-bottom: 30px;
+}
+
+.go-up-container a {
+	margin: auto;
+}
+
+</style>

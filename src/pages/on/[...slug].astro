@@ -15,8 +15,9 @@ type Props = CollectionEntry<'essays'>;
 const post = Astro.props;
 
 const render = await post.render();
-const passedProps = { ...post.data, ...render.remarkPluginFrontmatter};
+const passedProps = { ...post.data, ...render.remarkPluginFrontmatter, headings: render.headings};
 const { Content } = render;
+// console.log(render)
 ---
 
 <BlogPost {...passedProps}>

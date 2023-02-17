@@ -6,8 +6,8 @@ import { SITE_TITLE } from '../consts';
 <section class="sidebar"> 
 
     <section class="callme">
-        <h3>Get to me</h3>
-        <p>Send me long paragraphs at me@alexandrepapin.name or on the <a href="https://twitter.com/charmide">Twitter</a>.
+        <h3>Get in touch</h3>
+        <p>Send me lots of words <a href="mailto:me@alexandrepapin.name">by mail</a> or on the <a href="https://twitter.com/charmide">Twitter</a>.</p>
     </section>
 
     <!-- <section class="callme">
@@ -25,7 +25,9 @@ import { SITE_TITLE } from '../consts';
         </ul>
     </section> -->
 
-
+    <section class="github">
+        <a href="https://github.com/Apapin/apapin.com"><img src="/github.png" alt="view on github"/></a>
+    </section>
 </section>
 <style>
 .sidebar {
@@ -41,6 +43,23 @@ import { SITE_TITLE } from '../consts';
     padding: 1rem;
     border-bottom: 1px solid var(--ui-border-color);
     border-top: 1px solid var(--ui-border-color);
+    flex: 1;
+}
+
+.github {
+    height: 40px;
+    padding: 5px;
+    display: flex;
+}
+
+.github a {
+    opacity: 0.3;
+    margin: auto;
+}
+
+.github img {
+    width: 25px;
+    height: 25px;
 }
 
 </style>
