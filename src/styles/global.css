@@ -100,7 +100,11 @@ b {
 	--ui-border-color: var(--fg);
 }
 
-
+hr {
+	border: none;
+	border-top: 2px solid var(--separator-color);
+	margin: 1rem 0;
+}
 
 h1 {
 	color: var(--h1);

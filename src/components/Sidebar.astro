@@ -1,28 +1,18 @@
 ---
-import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../consts';
+import { Icon } from 'astro-icon'
+
 ---
 
 <section class="sidebar"> 
 
-    <section class="callme">
-        <p>Send me lots of words <a href="mailto:me@alexandrepapin.name">by mail</a>.</p>
+    <section class="content">
+        <p class="callme">
+            <a href="mailto:me@alexandrepapin.name"><Icon pack="mdi" name="email" />
+            </a>
+            <a href="https://twitter.com/charmide"><Icon pack="mdi" name="twitter" />
+            </a>
+        </p>
     </section>
-
-    <!-- <section class="callme">
-        <h3>Recent musings</h3>
-        <ul>
-            <li>
-                product management
-            </li>
-            <li>
-                how hard should it be
-            </li>
-            <li>
-                writing things down
-            </li>
-        </ul>
-    </section> -->
 
     <section class="github">
         <a href="https://github.com/Apapin/apapin.com"><img src="/github.png" alt="view on github"/></a>
@@ -38,11 +28,30 @@ import { SITE_TITLE } from '../consts';
     flex-direction: column;
 }
 
-.callme {
+.content {
     padding: 1rem;
     border-bottom: 1px solid var(--ui-border-color);
     border-top: 1px solid var(--ui-border-color);
+    display: flex;
     flex: 1;
+}
+
+.callme {
+    display: flex;
+    margin: 0 auto;
+    gap: 12px;
+    height: 50px;
+    opacity: 0.5;
+}
+
+.callme a {
+    height: 40px;
+    margin: auto;
+    color: inherit;
+}
+.callme svg {
+    width:32px;
+    height:32px;
 }
 
 .github {

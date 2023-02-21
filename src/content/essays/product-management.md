@@ -1,8 +1,8 @@
 ---
 title: "product management hats"
 description: "A comprehensive if somewhat abstract description of the different roles of product management."
-pubDate: "November, 2022"
-revDate: "February, 2023"
+created: 2022-08-20
+updated: 2023-02-05
 ---
 
 I care a lot about product management. Learning, thinking, and talking about it, as well as doing it. It calls on traits I value: being a generalist, communicating well and talking to people, and a great mix of rationality & intuition… I care about it too much by the standards I apply to myself. I got attached to the label itself at some point along the way.

@@ -1,0 +1,20 @@
+---
+import { format, formatDistance, parseISO } from 'date-fns';
+
+export interface Props {
+	date: Date;
+}
+
+const { date } = Astro.props;
+
+const formatDate = (date: string) => {
+	return formatDistance(parseISO(date), new Date(), { addSuffix: true })
+}
+
+const formatDateHover = (date: string) => {
+	return format(parseISO(date), 'yyyy-MM-dd')
+}
+
+---
+
+<time title={formatDateHover(date)}>{formatDate(date)}</time></span>

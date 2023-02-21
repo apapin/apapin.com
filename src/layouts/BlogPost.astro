@@ -1,13 +1,15 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import Date from '../components/Date.astro';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Sidebar from '../components/Sidebar.astro';
 import slugify from '@sindresorhus/slugify';
+import numbro from 'numbro';
 
 type Props = CollectionEntry<'essays'>['data'];
-const { title, description, pubDate, revDate, heroImage, numberOfWords, minutesRead, headings } = Astro.props;
-//console.log(Astro.props.headings);
+const { title, description, created, tags, updated, heroImage, numberOfWords, minutesRead, headings } = Astro.props;
+
 ---
 
 
@@ -18,11 +20,6 @@ const { title, description, pubDate, revDate, heroImage, numberOfWords, minutesR
 			.title {
 				font-size: 2em;
 				margin: 0.25em 0 0;
-			}
-			hr {
-				border: none;
-				border-top: 2px solid var(--separator-color);
-				margin: 1rem 0;
 			}
 			.subdued {
 				opacity: 0.7;
@@ -41,18 +38,19 @@ const { title, description, pubDate, revDate, heroImage, numberOfWords, minutesR
 					{heroImage && <img width={720} height={360} src={heroImage} alt="" />}
 					<h1 class="title" id={slugify(title)}>{title}</h1>
 					<span class="subdued">
-						{pubDate && !revDate && <span>Written <time>{pubDate}</time></span>}
-						{pubDate && revDate && <span>Written <time>{pubDate}</time> · revised {revDate}</span>}
-						{<span>· {Math.floor(numberOfWords/100)/10}k words, {minutesRead}</span>}
+						{created && !updated && <span>Written <Date date={created}/></span>}
+						{created && updated && <span>Written <Date date={created}/> · updated <Date date={updated}/></span>}
+						{<span>· {numbro(numberOfWords).format({average: true})} words, {minutesRead}</span>}
+						<!-- {tags && <p class="tags"> {tags.map((tag) => <span class="tag">#{tag}</span>)}</p>} -->
 					</span>
 					<hr />
-					<div class="toc">
+					{(headings.length > 0) && <div class="toc">
 						<ol>
 							{headings.map((heading) => (
 								<li><a href={"#"+heading.slug}>{heading.text}</a></li>
 							))}
 						</ol>
-					</div>
+					</div>}
 					<slot />
 					<hr/>
 					<div class="go-up-container">
