@@ -5,7 +5,7 @@ import Sidebar from '../components/Sidebar.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import Date from '../components/Date.astro';
 
-import compareAsc from 'date-fns/compareAsc'
+import { compareAsc } from 'date-fns';
 import { getCollection } from 'astro:content';
 const posts = (await getCollection('essays')).sort(
 	(a, b) => -compareAsc(a.data.created, b.data.created)
