@@ -3,6 +3,14 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Sidebar from '../components/Sidebar.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import Date from '../components/Date.astro';
+
+import compareAsc from 'date-fns/compareAsc'
+import { getCollection } from 'astro:content';
+const posts = (await getCollection('essays')).sort(
+	(a, b) => -compareAsc(a.data.created, b.data.created)
+);
+
 ---
 
 <!DOCTYPE html>
@@ -17,21 +25,39 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			<div class="contentwrapper">
 				<h1>Hi ❤️</h1>
 				<p>
-					Welcome to my humble home on the internet. I'm Alexandre Papin, a wannabe renaissance man from France. 
+					My name is Alexandre Papin.  
 				</p>
-				
 				<p>
-					Here you'll find a collection of thoughts I've forced myself to write down and share, hoping they'd get better in the process. 
+					Here you'll find a collection of thoughts I've forced myself to write down and share, hoping they'd get better in the process
 				</p>
-					
 				<p>I hope you'll like them. If you do, let me know <a href="me@alexandrepapin.name">by mail</a> or on <a href="https://www.twitter.com/charmide">the twitter</a>. </p>
 				<hr/>
 				<h2>Recent musings</h2>
-				<ul>
-					<li><a href="/on/product-management">product management hats</a> - a long-winded attempt at theorizing the role.</li>
-					<li><a href="/on/it-shouldnt-feel-hard">it shouldn't feel hard</a> - a reminder to myself that we tolerate too much, and also not enough.</li>
+				<ul>					
+				
+					{
+						posts.map((post) => (
+							<li class="post-link">
+								<p><a href={`/on/${post.slug}/`}>{post.data.title}</a></p>
+								<p class="description">{post.data.description}</p>
+							</li>
+						))
+					}
 				</ul>
+				
 			</div>
 		</main>
 	</body>
 </html>
+<style>
+	.post-link .description {
+		margin-top: -0.7em;
+	}
+
+	
+
+	li {
+		margin-bottom: 1.8em;
+	}
+	
+	</style>

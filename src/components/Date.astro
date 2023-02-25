@@ -6,15 +6,20 @@ export interface Props {
 }
 
 const { date } = Astro.props;
+let correctDate = date;
 
-const formatDate = (date: string) => {
-	return formatDistance(parseISO(date), new Date(), { addSuffix: true })
+if (typeof date === 'string' || date instanceof String) {
+	// @ts-ignore
+	correctDate = parseISO(date);
 }
 
-const formatDateHover = (date: string) => {
-	return format(parseISO(date), 'yyyy-MM-dd')
+const formatDate = (date: Date) => {
+	return formatDistance(date, new Date(), { addSuffix: true })
+}
+
+const formatDateHover = (date: Date) => {
+	return format(date, 'yyyy-MM-dd')
 }
 
 ---
-
-<time title={formatDateHover(date)}>{formatDate(date)}</time></span>
+<time title={formatDateHover(correctDate)} datetime={""+date}>{formatDate(correctDate)}</time>
