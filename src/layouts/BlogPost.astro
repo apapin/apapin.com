@@ -1,80 +1,114 @@
 ---
-import type { CollectionEntry } from 'astro:content';
-import Date from '../components/Date.astro';
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Sidebar from '../components/Sidebar.astro';
-import slugify from '@sindresorhus/slugify';
-import numbro from 'numbro';
+import type { CollectionEntry } from "astro:content";
+import Date from "../components/Date.astro";
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import slugify from "@sindresorhus/slugify";
+import numbro from "numbro";
 
-type Props = CollectionEntry<'essays'>['data'];
-const { title, description, created, tags, updated, heroImage, numberOfWords, minutesRead, headings } = Astro.props;
-
+type Props = CollectionEntry<"essays">["data"];
+const {
+  title,
+  description,
+  created,
+  tags,
+  updated,
+  heroImage,
+  numberOfWords,
+  minutesRead,
+  headings,
+} = Astro.props;
 ---
 
-
 <html lang="en">
-	<head>
-		<BaseHead title={title} description={description} />
-	</head>
+  <head>
+    <BaseHead title={title} description={description} />
+  </head>
 
-	<body>
-		<Header title={title} />
-		<Sidebar />
-		<main>
-			<section class="contentwrapper">
-				<article>
-					{heroImage && <img width={720} height={360} src={heroImage} alt="" />}
-					<h1 class="title" id={slugify(title)}>{title}</h1>
-					<span class="subdued">
-						{created && !updated && <span>Written <Date date={created}/></span>}
-						{created && updated && <span>Written <Date date={created}/> · updated <Date date={updated}/></span>}
-						{<span>· {numbro(numberOfWords).format({average: true})} words, {minutesRead}</span>}
-						<!-- {tags && <p class="tags"> {tags.map((tag) => <span class="tag">#{tag}</span>)}</p>} -->
-					</span>
-					<hr />
-					{(headings.length > 0) && <div class="toc">
-						<ol>
-							{headings.map((heading) => (
-								<li><a href={"#"+heading.slug}>{heading.text}</a></li>
-							))}
-						</ol>
-					</div>}
-					<slot />
-					<hr/>
-					<div class="go-up-container">
-					</div>
-				</article>
-			</section>
-		</main>
-	</body>
+  <body>
+    <Header title={title} />
+    <main>
+      <section class="contentwrapper">
+        <article>
+          {heroImage && <img width={720} height={360} src={heroImage} alt="" />}
+          <h1 class="title" id={slugify(title)}>{title}</h1>
+          <span class="subdued">
+            {
+              created && !updated && (
+                <span>
+                  Written <Date date={created} />
+                </span>
+              )
+            }
+            {
+              created && updated && (
+                <span>
+                  Written <Date date={created} /> · updated{" "}
+                  <Date date={updated} />
+                </span>
+              )
+            }
+            {
+              (
+                <span>
+                  · {numbro(numberOfWords).format({ average: true })} words,{" "}
+                  {minutesRead}
+                </span>
+              )
+            }
+            <!-- {tags && <p class="tags"> {tags.map((tag) => <span class="tag">#{tag}</span>)}</p>} -->
+          </span>
+          <hr />
+          {
+            headings.length > 0 && (
+              <div class="toc">
+                <ol>
+                  {headings.map((heading) => (
+                    <li>
+                      <a href={"#" + heading.slug}>{heading.text}</a>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            )
+          }
+          <slot />
+          <hr />
+          <div class="go-up-container">
+            Follow me on <a href="https://twitter.com/charmide"> Twitter</a> or <a
+              href="/">read more things</a
+            >.
+          </div>
+        </article>
+      </section>
+    </main>
+    <style>
+      .title {
+        font-size: 2em;
+        margin: 0.25em 0 0;
+      }
+      .subdued {
+        opacity: 0.7;
+        font-size: 14px;
+        font-style: italic;
+      }
+      .toc {
+        /* border: 1px solid red; */
+        width: 230px;
+        float: left;
+        margin-right: 20px;
+        padding: 5px;
+        background-color: var(--bg-alt);
+        border: 1px solid var(--separator-color);
+      }
+
+      .go-up-container {
+        display: flex;
+        padding-bottom: 30px;
+      }
+      .go-up-container a {
+        margin: 0 0.3em;
+      }
+    </style>
+  </body>
 </html>
-<style>
-.title {
-	font-size: 2em;
-	margin: 0.25em 0 0;
-}
-.subdued {
-	opacity: 0.7;
-	font-size: 14px;
-	font-style: italic;
-}
-.toc {
-	/* border: 1px solid red; */
-	width: 230px;
-	float: left;
-	margin-right: 20px;
-	padding: 5px;
-	background-color: var(--bg-alt);
-	border: 1px solid var(--separator-color);
-}
-
-.go-up-container {
-	display: flex;
-	padding-bottom: 30px;
-}
-
-.go-up-container a {
-	margin: auto;
-}
-</style>

@@ -1,8 +1,8 @@
 ---
 title: "four amounts of eyes"
-description: "a classification of people according to the size of the audience they seek"
+description: "a classification of people according to the size of the audience they need in their life"
 created: 2023-02-25
-tags: ["ideas", "note"]
+tags: ["idea", "fragment"]
 ---
 
 In Kundera's _The unbearable lightness of being_, one of the characters postulates that everyone needs someone to look at them but that we all fall into one of four categories according to "the kind of look we wish to live under."

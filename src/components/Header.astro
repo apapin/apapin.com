@@ -1,90 +1,87 @@
 ---
-import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../consts';
-import { Icon } from 'astro-icon'
+import HeaderLink from "./HeaderLink.astro";
+import { SITE_TITLE } from "../consts";
+import { Icon } from "astro-icon";
 
 export interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
-
 ---
 
 <header>
   <div class="logo">
-	<strong><a href="/">apapin</a></strong>
+    <strong><a href="/">apapin</a></strong>
   </div>
   <div class="tab">
-	<span>{title ?? "Home"}</span>
+    <span>{title ?? "Home"}</span>
   </div>
 </header>
 <style>
-	header {
-		border-bottom: 1px solid var(--ui-border-color);
-		background-color: var(--bg-darkest);
+  header {
+    border-bottom: 1px solid var(--ui-border-color);
+    background-color: var(--bg-darkest);
 
-		display: flex;
-		position: relative;
+    display: flex;
+    position: relative;
 
-		font-family: "IBM Plex Mono", monospace;
-	}
+    font-family: "IBM Plex Mono", monospace;
+  }
 
-	.logo {
-		width: 240px;
-		height: 100%;
-		display: flex;
-	}
+  .logo {
+    width: 240px;
+    height: 100%;
+    display: flex;
+  }
 
-	.logo strong {
-		margin: auto;
-	}
+  .logo strong {
+    margin: auto;
+  }
 
-	.logo strong a {
-		color: inherit;
-		text-decoration: none;
-	}
+  .logo strong a {
+    color: inherit;
+    text-decoration: none;
+  }
 
-	.link {
-		margin: auto;
-		color: var(--h1);
-		font-weight: bold;
-		font-size: 16px;
-	}
+  .link {
+    margin: auto;
+    color: var(--h1);
+    font-weight: bold;
+    font-size: 16px;
+  }
 
-	.tab {
-		display: flex;
-		background-color: var(--bg);
-		padding-right: 30px;
-		padding-left: 30px;
-		transform: translate(-1px,1px);
-		border-right: 1px solid var(--ui-border-color);
-		border-top: 1px solid var(--ui-border-color);
-		border-left: 1px solid var(--ui-border-color);
+  .tab {
+    display: flex;
+    background-color: var(--bg);
+    padding-right: 30px;
+    padding-left: 30px;
+    transform: translate(-1px, 1px);
+    border-right: 1px solid var(--ui-border-color);
+    border-top: 1px solid var(--ui-border-color);
+    border-left: 1px solid var(--ui-border-color);
+  }
 
-	}
+  .tab svg {
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    right: 5px;
+    padding: 5px;
+    color: var(--fg);
+  }
 
-	.tab svg {
-		height: 16px;
-		width: 16px;
-		position: absolute; 
-		right: 5px;
-		padding: 5px;
-		color: var(--fg);
-	}
+  @media (max-width: 800px) {
+    .tab {
+      display: none !important;
+    }
+  }
 
-	@media(max-width: 800px) {
-		.tab {
-			display: none !important;
-		}
-	}
-
-	.tab span {
-		color: var(--fg);
-		margin: auto;
-		/* overflow: hidden; */
-		white-space: nowrap;
-		/* text-overflow: ellipsis;  */
-	}
-
+  .tab span {
+    color: var(--fg);
+    margin: auto;
+    /* overflow: hidden; */
+    white-space: nowrap;
+    /* text-overflow: ellipsis;  */
+  }
 </style>

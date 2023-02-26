@@ -4,6 +4,7 @@
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
 
+
 body {
 	text-align: left;
 	word-wrap: break-word;
@@ -22,7 +23,7 @@ body {
 	grid-template-rows: 40px  1fr;
     grid-template-areas:
                "header header  header"
-               "sidebar content content";
+               "content content content";
 }
 
 @media(max-width: 800px) {
@@ -36,15 +37,6 @@ body {
 }
 
 
-.sidebar {
-	grid-area: sidebar;
-}
-
-@media(max-width: 800px) {
-	.sidebar {
-		display: none !important;
-	}
-}
 
 header {
 	grid-area: header;
@@ -65,11 +57,10 @@ body {
 	text-rendering: optimizeLegibility;
 }
 :root {
-	font-family: 'Inter', sans-serif; 
+	font-family: 'Libre Baskerville', serif;
+	font-weight: 400;
+	font-size: 18px;
 }
-@supports (font-variation-settings: normal) {
-	:root { font-family: 'Inter var', sans-serif; }
-  }
 
 h1,
 h2,
