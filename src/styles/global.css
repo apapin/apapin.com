@@ -79,8 +79,8 @@ b {
 	--fg-muted1: rgba(199, 146, 234, 0.593);
 	--fg-muted: rgba(141, 67, 190, 1);
 	--fg-body: white;
-	--bg: #130c18;
-	--bg-alt: #1b1222;
+	--bg-alt: #130c18;
+	--bg: #1b1222;
 	--bg-darkest: black;
 	--accent: #ffeb95;
 	--accent2: #7fdbca;
@@ -151,8 +151,8 @@ pre > code {
 }
 blockquote {
 	border: 1px solid #999;
-	color: #222;
 	padding: 2px 0px 2px 20px;
+	background-color: var(--bg-alt);
 	margin: 0px;
 	font-style: italic;
 }
