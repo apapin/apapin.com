@@ -49,14 +49,7 @@ const {
                 </span>
               )
             }
-            {
-              (
-                <span>
-                  · {numbro(numberOfWords).format({ average: true })} words,{" "}
-                  {minutesRead}
-                </span>
-              )
-            }
+            {(<span> · {minutesRead}</span>)}
             <!-- {tags && <p class="tags"> {tags.map((tag) => <span class="tag">#{tag}</span>)}</p>} -->
           </span>
           <hr />
