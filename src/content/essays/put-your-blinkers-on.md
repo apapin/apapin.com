@@ -1,6 +1,6 @@
 ---
 title: "put your blinkers on"
-description: "a.k.a. the curse of knowing too much"
+description: "a.k.a. value-add lobotomization"
 created: 2023-03-02
 tags: ["principle"]
 previewImage: "/blinkers.jpg"
