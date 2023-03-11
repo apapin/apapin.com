@@ -1,25 +1,27 @@
 ---
-import { format, formatDistance, parseISO } from 'date-fns';
+import { format, formatDistance, parseISO } from "date-fns";
 
 export interface Props {
-	date: Date;
+  date: Date;
 }
 
 const { date } = Astro.props;
 let correctDate = date;
 
-if (typeof date === 'string' || date instanceof String) {
-	// @ts-ignore
-	correctDate = parseISO(date);
+if (typeof date === "string" || date instanceof String) {
+  // @ts-ignore
+  correctDate = parseISO(date);
 }
 
 const formatDate = (date: Date) => {
-	return formatDistance(date, new Date(), { addSuffix: true })
-}
+  return format(date, "LLL d, YYY");
+};
 
 const formatDateHover = (date: Date) => {
-	return format(date, 'yyyy-MM-dd')
-}
-
+  return format(date, "yyyy-MM-dd");
+};
 ---
-<time title={formatDateHover(correctDate)} datetime={""+date}>{formatDate(correctDate)}</time>
+
+<time title={formatDateHover(correctDate)} datetime={"" + date}
+  >{formatDate(correctDate)}</time
+>
