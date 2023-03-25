@@ -1,7 +1,7 @@
 ---
 title: "allegiance to the bits"
 description: "i grew up on the internet, and people are too quick to bail on it"
-created: 2023-03-19
+created: 2023-03-26
 tags: []
 ---
 
