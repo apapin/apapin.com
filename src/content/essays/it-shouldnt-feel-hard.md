@@ -2,7 +2,7 @@
 title: "it shouldn't feel hard"
 description: "a reminder to myself that we tolerate too much, and also not enough."
 created: 2023-02-19
-tags: ["principle", "fragment"]
+tags: ["essay", "principle", "fragment", "life"]
 ---
 
 I think we have come to tolerate both too much and not enough.

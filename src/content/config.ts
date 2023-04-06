@@ -12,6 +12,7 @@ const essays = defineCollection({
 			.or(z.string().transform((val) => new Date(val)))
 			.optional(),
 		heroImage: z.string().optional(),
+		tags: z.array(z.string()),
 	}),
 });
 

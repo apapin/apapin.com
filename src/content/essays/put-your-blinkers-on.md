@@ -2,7 +2,7 @@
 title: "put your blinkers on"
 description: "a.k.a. value-add lobotomization"
 created: 2023-03-02
-tags: ["principle"]
+tags: ["note", "principle", "life"]
 previewImage: "/blinkers.jpg"
 ---
 
