@@ -19,39 +19,95 @@ const posts = (await getCollection("essays")).sort(
   <body>
     <Header title="Home" />
     <main>
-      <div class="contentwrapper">
-        <h1>Hi ❤️</h1>
-        <p>
-          Welcome to my corner of the web space, my name is Alexandre Papin.
-        </p>
-        <p>
-          Here you'll mostly find a collection of thoughts I've forced myself to
-          write down and share, hoping they'd get better in the process
-        </p>
-        <p>
-          I hope you'll like them. If you do, tell me about it on <a
-            href="https://www.twitter.com/charmide">the twitter</a
-          >.
-        </p>
-        <hr />
+      <div class="homewrapper">
+        <section class="intro">
+          <h1>Hi ❤️</h1>
+          <p>
+            Welcome to my corner of the web space, my name is Alexandre Papin.
+          </p>
+          <p>
+            Here you'll mostly find a collection of thoughts I've forced myself
+            to write down and share, hoping they'd get better in the process
+          </p>
+          <p>
+            I hope you'll like them. If you do, tell me about it on <a
+              href="https://www.twitter.com/charmide">the twitter</a
+            >.
+          </p>
+        </section>
         <section class="posts">
+          <h1>Essays</h1>
+          <p class="section-desc">
+            Stories, threads of ideas, and long-writing
+          </p>
+
           {
-            posts.map((post) => (
-              <a href={`/on/${post.slug}/`} class="post-link">
-                <section>
-                  <h3 class="title">{post.data.title}</h3>
-                  <span class="date">
-                    <Date date={post.data.created} />
-                  </span>
-                  · <span class="description">{post.data.description}</span>
-                </section>
-              </a>
-            ))
+            posts
+              .filter((p) => p.data.tags.includes("essay"))
+              .map((post) => (
+                <a href={`/on/${post.slug}/`} class="post-link">
+                  <section>
+                    <h3 class="title">{post.data.title}</h3>
+                    <span class="date">
+                      <Date date={post.data.created} />
+                    </span>
+                    · <span class="description">{post.data.description}</span>
+                  </section>
+                </a>
+              ))
+          }
+        </section>
+        <section class="posts">
+          <h1>Notes</h1>
+          <p class="section-desc">
+            Units of knowledge, concepts and ideas I keep coming back to.
+          </p>
+          {
+            posts
+              .filter((p) => p.data.tags.includes("note"))
+              .map((post) => (
+                <a href={`/on/${post.slug}/`} class="post-link">
+                  <section>
+                    <h3 class="title">{post.data.title}</h3>
+                    <span class="date">
+                      <Date date={post.data.created} />
+                    </span>
+                    · <span class="description">{post.data.description}</span>
+                  </section>
+                </a>
+              ))
           }
         </section>
       </div>
     </main>
     <style>
+      .homewrapper {
+        margin: 0 10px;
+        padding: 0 1em;
+
+        display: grid;
+        grid-template-columns: 340px 340px 340px;
+        grid-gap: 2em;
+      }
+
+      .homewrapper section {
+        width: 100%;
+      }
+
+      @media (max-width: 1001px) {
+        .homewrapper {
+          margin: auto;
+          width: 596px;
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .section-desc {
+        margin-top: -20px;
+        font-size: 0.9em;
+        opacity: 0.6;
+      }
+
       .post-link {
         text-decoration: inherit;
         color: inherit;
