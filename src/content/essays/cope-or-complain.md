@@ -13,7 +13,7 @@ I have a high sensitivity to incoherence: if something isn't what it ought or co
 
 There is something deeply personal to this stance, two different ways of seeing the world. It makes me clash with even people I agree on subject matters with. The other side will call me an idealist, perfectionist, too stubborn, or impatient. People who share my view, however, are allies for life.
 
-I think it'd tied to my hatred of any form of condescension, of patronizing. I want people to be straight with me and not pander, I'd rather have someone tell me what they think is wrong than focus on the good for the sake of shared happiness. If you think everything is great, then it's just a lack of imagination.
+I think it's tied to my hatred of any form of condescension, of patronizing. I want people to be straight with me and not pander, I'd rather have someone tell me what they think is wrong than focus on the good for the sake of shared happiness. If you think everything is great, then it's just a lack of imagination.
 
 I think it's also largely tied to the notion of locus of control. If you believe you're the master of your destiny, then imperfections in the world are something for you and others to solve, and only will be preventing you from doing so. If not, then you'd better change yourself rather than change the state of things.
 
