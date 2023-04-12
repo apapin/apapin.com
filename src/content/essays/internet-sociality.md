@@ -1,12 +1,13 @@
 ---
-title: "what makes internet sociality special"
+title: "internet sociality"
 description: "why is getting to know people on the internet so unique?"
 created: 2023-04-12
 tags: ["note", "internet"]
 ---
 
-The recent exodus from one peculiar part of Twitter to Blue Sky has made me realize that I definitely am not interested by social networks for the same reasons others might be. 
-So I thought I'd attempt to list reasons why I spent so much time on the internet getting to know people, and why it's so special. 
+The recent exodus from one peculiar part of Twitter to Blue Sky has made me realize that I definitely am not interested by social networks for the same reasons others might be.
+
+So I thought I'd attempt to list reasons why I spent so much time on the internet getting to know people, and why I think it's so special. 
 
 ## Scale
 The first factor is scale. Scale means that any arbitrary specific niche can exist, freed from the bounding factor of geography. In real life, you settle down, your choices of friendships are made by default by access restrictions. On the internet, you can set whatever level of commonality you want, and you'll be able to find people and communities sharing it. 
