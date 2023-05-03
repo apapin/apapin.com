@@ -2,6 +2,7 @@
 title: "praising obscurity"
 description: "ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn"
 created: 2023-05-02
+updated: 2023-05-03
 tags: ["essay", "internet", "writing"]
 ---
 
@@ -22,4 +23,4 @@ Replies are a test of this too. Good reply games is going up, taking a step forw
 
 I don't like it when people are voluntarily illegible and it's a performative thing. I think it can be exploitative. A lot of posters have made a career out of being ambiguous enough to be interpreted as possibly anything, and popularity-maxxing that way. Maybe Nietzsche was the original one, almost accidentally, piling one aphorism after another. Regardless, there is no need to be fake about it.
 
-Being you and respecting the world in its complexity is enough. Sensations and memories are fuzzy and messy. Authentic people are not simple or reducible, nor should you wish that they be. And diaries in the open give us a unique way to demonstrate that and create true deep by default connexions with people who might read them.
+Being you and respecting the world in its complexity is enough. Sensations and memories are fuzzy and messy. Real people are not simple or reducible, nor should you wish that they be. And diaries in the open give us a unique way to demonstrate that and create true deep by default connexions with people who might read them.
