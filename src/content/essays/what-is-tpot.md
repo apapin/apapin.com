@@ -2,6 +2,7 @@
 title: "what is tpot?"
 description: "inquisitive minds want to know"
 created: 2023-05-03
+updated: 2023-05-04
 tags: ["note", "internet"]
 ---
 
@@ -20,7 +21,7 @@ TPOT stands for This Part of Twitter or, according to heretics, This Part of TPO
 
 - **As a set of interests**: linking back to genealogy, TPOT tends to be interested in things that are not reducible to rationalism. Meaning you'll find inscrutable "vibes" thrown in their posts often, they might talk about things that seem esoteric, or they'll attempt to philosophize and think at the "meta-level" about things that are upstream of the commonly discussed "object-level" things, such as politics. That also ties in nicely with general politeness and lack of partisanship. 
 
-Any definition isn't worth much, in fact anyone in TPOT will probably declare themselves TPOT-adjacent instead of anything else. If someone is telling you they're in TPOT, they probably aren't. A reflection that you probably shouldn't pay much attention to the definition and just take people at face value for stuff they actually say, and notice who talks to whomst if you're so inclined. The label is only useful to gatekeep from the inside, by deciding who is in and who is out, or to demonize from the outside, by painting a simplified enemy. 
+Any definition isn't worth much, in fact anyone in TPOT will probably declare themselves TPOT-adjacent instead of anything else. If someone is telling you they are representing TPOT, they probably aren't. Even my attempt at a description isn't probably that good, I'll leave it to future internet historians. It's a reflection that you probably shouldn't pay much attention to the definition and just take people at face value for stuff they actually say, and notice who talks to whomst if you're so inclined. The label is only useful to gatekeep from the inside, by deciding who is in and who is out, or to demonize from the outside, by painting a simplified enemy. 
 
 If you're going to use belonging to TPOT as a heuristic to judge people, it's going to fail. For all of the niceness and embracing of experience, it sometimes feels like half of TPOT has half of TPOT blocked or muted. There is no single ideology or thing that this label stands for. Maybe you'll find things you like and people you enjoy reading in there, but I would advise against using that label to drive any of your life decisions on your social platform of choice.
 
