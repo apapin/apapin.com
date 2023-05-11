@@ -5,7 +5,7 @@ created: 2023-04-12
 tags: ["note", "internet"]
 ---
 
-The recent exodus from one peculiar part of Twitter to Blue Sky has made me realize that I definitely am not interested by social networks for the same reasons others might be.
+The recent exodus from one peculiar part of Twitter to Bluesky has made me realize that I definitely am not interested by social networks for the same reasons others might be.
 
 So I thought I'd attempt to list reasons why I spent so much time on the internet getting to know people, and why I think it's so special. 
 
