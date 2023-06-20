@@ -2,7 +2,7 @@
 title: "the sweetness of literacy"
 description: "a story of catching feelings on twitter and of what it tells me about romance"
 created: 2023-06-16
-tags: ["love"]
+tags: ["love", "essay"]
 ---
 
 gather around for the story of my first time catching feelings for a twitter avatar, a banal affair but one that meant much to me. let's set the scene. it's spring 2023. i had been single for a few months after an uninspiring relationship. in more than one way, my life was in a bit of a rut. the dominant motif: i'm in the middle of a job search, a painful one at that. a general lack of motivation, a downturn market, a lot of rejection, an offer i thought solid that got rescinded last minute. no one should be depressed in spring, but here i was. i had one major strategy to distract myself: i had just started being active on twitter. It finally occurred to me that my 14 year old account could be used for something else than an RSS feed of pointers to interesting writings i'd open once per month.
