@@ -1,3 +1,10 @@
+---
+title: "the matchmaking company"
+description: "tech for human flourishing"
+created: 2023-06-30
+tags: ["story"]
+---
+
 the company was founded with a mission. a compelling, cute, and perennial one. a wave of hype around a new tech had just made everyone reconsider what was possible, but the fields to which it could be applied were always the same. this time it was a word cloud: human flourishing, connecting people, bringing them together. the founders were not exactly of the decisive visionary type, they didn't paint a clear picture of what they were going to do. but they had a great track record, so vague gesturing was enough to get significant investments. 
 
 one of the founders had more convictions than that. "it was a shameful waste", he thought. a lot of lonely people on Earth: they only needed each other. his engineer-brain couldn't bear it. slack in the machine, perfect unions prevented from being by inefficiencies, coincidences, and the unfortunate hand of fate. too tempting a thing to engineer! like someone looking at a map in the 1840s and wondering why nobody had built the Suez canal yet. humanity had a problem to solve. 
