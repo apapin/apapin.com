@@ -2,7 +2,7 @@
 title: "repeated small acts of joy"
 description: "a sweet little vignette of growing in love"
 created: 2023-07-01
-tags: ["story"]
+tags: ["story", "essay"]
 ---
 
 he had met a girl. he had fallen for her harder than he had fallen for anyone before. in his head, many alarm bells were ringing. they had had pleasant interactions, he could feel a mutual pull, gentle nudges towards the notion that it wasn't all made up in his head. but he could also feel his unbridled enthusiasm and optimism turn him into a babbling idiot, the most unattractive of all obsequious messes. visions of a future so perfect they reverbed back in time and turned his brain into mush.
