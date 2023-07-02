@@ -35,9 +35,9 @@ their relationship kept on going: evenings of cozy dates, lazy sunday afternoons
 
 ---
 
-5 years later, she was emerging from the study with her hair in a messy bun, looking startled by the outside world as always after a long session of writing.
+5 years later, she was emerging from the study, looking startled by the outside world as always after a long session of writing.
 
-by the time she realized he was here, his loving gaze had been on her for seconds. she promptly returned it. "what's for dinner?", she asked.
+by the time she realized he was here, his loving gaze had been on her for a few seconds. she promptly returned it. "what's for dinner?", she asked.
 
 he had just finished reading the third chapter of her novel. he could see the marks of their long conversations in it, some of himself here and there. she was getting so much better at this. what he saw in her all these years ago was now at the surface, visible to all.
 
