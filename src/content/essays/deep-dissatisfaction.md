@@ -1,4 +1,4 @@
-  ---
+---
 title: "deep dissatisfaction"
 description: "..."
 created: 2023-08-16
