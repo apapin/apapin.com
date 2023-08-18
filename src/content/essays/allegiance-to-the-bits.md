@@ -2,7 +2,7 @@
 title: "allegiance to the bits"
 description: "i grew up on the internet, and people are too quick to bail on it"
 created: 2023-03-26
-tags: ["essay"]
+tags: ["essay", "internet"]
 ---
 
 I grew up on the internet. I got my first 56k modem in the early 2000s, when I was about 11 or 12. First it was the family computer, and then it moved to my room, and then I got online.

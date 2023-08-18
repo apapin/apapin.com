@@ -2,7 +2,7 @@
 title: "smart kid, bad process"
 description: "a sort of resource curse for the cute"
 created: 2023-05-13
-tags: ["essay", "fragment", "life"]
+tags: ["essay", "life"]
 ---
 
 Why are tall men more confident? It's a thing, according to some social science that I presume can't be replicated because really none can. But entertaining this, let's say a few causal links are going on. Let's say tall people are more appreciated socially, seen as more beautiful or impressive, and therefore just perceived as more confident. Or let's say that because they are perceived thus, they probably snowball from early success into a heightened taste for proactive social interactions, leading them to develop these skills more. But you can also imagine a reverse second-order effect: helped by your intrinsic qualities, you probably are not going to ever need to develop a vast swath of skills that others might hone to compensate. A sort of [resource curse](https://en.wikipedia.org/wiki/Resource_curse) for the cute.

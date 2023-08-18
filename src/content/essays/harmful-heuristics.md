@@ -2,7 +2,7 @@
 title: "harmful heuristics"
 description: "or how taking shortcuts to judge people is bad"
 created: 2023-04-13
-tags: ["essay", "principle", "ethics"]
+tags: ["essay", "principle"]
 ---
 
 Something fundamental to my morality views is that dismissing people based on external superficial characteristics, like belonging to a certain demographic, is bad. This is not exactly revolutionary but I don't see it framed in a way that resonates with me often, so let me take a shot at that.

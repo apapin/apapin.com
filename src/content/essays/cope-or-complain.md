@@ -2,7 +2,7 @@
 title: "cope or complain"
 description: "I don't like surface-level optimism"
 created: 2023-03-19
-tags: ["essay", "fragment", "life"]
+tags: ["fragment", "life"]
 ---
 
 "Benevolence" is a common virtue or value exalted in a few contexts I've been in. In my experience, it means do not ruffle any feathers and do not point out what's wrong with the status quo. I've always been upset at that. I think it accounts for a large part of whether I'll like a community, a company, a relationship, or a person.

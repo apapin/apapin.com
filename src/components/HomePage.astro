@@ -1,0 +1,186 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import BaseHead from "./BaseHead.astro";
+import Header from "./Header.astro";
+import Date from "./Date.astro";
+
+import * as R from "ramda";
+
+import { compareAsc } from "date-fns";
+import { getCollection } from "astro:content";
+const { posts, activeTag } = Astro.props;
+
+const tags = R.uniq(posts.flatMap((p) => p.data.tags));
+
+const tagsOccurences = R.mergeAll(
+  tags.map((tag) => ({
+    [tag]: posts.filter((p) => p.data.tags.includes(tag)).length,
+  }))
+);
+
+const sortedTags = R.sortBy((tag) => -tagsOccurences[tag], tags);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header title="Home" />
+    <main>
+      <div class="homewrapper">
+        <section class="intro">
+          <h1>Hi ❤️</h1>
+          <p>
+            Welcome to my corner of the web space, my name is Alexandre Papin.
+          </p>
+          <p>
+            Here you'll find a disparate collection of writings I've timidly
+            published after recently remembering I was in love with words this
+            whole time.
+          </p>
+          <p>
+            I hope you'll like them. If you do, tell me about it on <a
+              href="https://www.twitter.com/charmide">the twitter</a
+            >.
+          </p>
+          <section class="tags-list">
+            {
+              sortedTags.map((tag) => (
+                <a href={activeTag !== tag ? `/tag/${tag}` : `/`}>
+                  <div class={activeTag !== tag ? `tag` : `tag active`}>
+                    <span class="label">{tag}</span>
+                    <span class="number">
+                      {posts.filter((p) => p.data.tags.includes(tag)).length}
+                    </span>
+                  </div>
+                </a>
+              ))
+            }
+          </section>
+        </section>
+        <section class="posts">
+          {
+            posts.map((post) => (
+              <a href={`/on/${post.slug}/`} class="post-link">
+                <section>
+                  <h3 class="title">{post.data.title}</h3>
+                  <span class="date">
+                    <Date date={post.data.created} />
+                  </span>
+                  · <span class="description">{post.data.description}</span>
+                </section>
+              </a>
+            ))
+          }
+        </section>
+      </div>
+    </main>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .homewrapper {
+        margin: 0 10px;
+        padding: 0 1em;
+        position: relative;
+
+        display: flex;
+      }
+
+      .intro {
+        min-width: 340px;
+        width: 340px;
+        padding-left: 1em;
+        padding-right: 1em;
+      }
+
+      .tags-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3px;
+        justify-content: center;
+        margin-bottom: 2em;
+        margin-top: 2em;
+      }
+      .tags-list a {
+        text-decoration: none;
+      }
+
+      .tag {
+        background-color: black;
+        border: 1px solid gray;
+        border-radius: 100px;
+        padding: 8px 12px 8px 12px;
+        margin-bottom: 2px;
+      }
+      .tag .label {
+        color: white;
+      }
+      .tag .number {
+        color: gray;
+      }
+
+      .tag.active {
+        background-color: black;
+        border: 1px solid var(--accent);
+      }
+      .tag.active .label {
+      }
+      .tag.active .number {
+      }
+
+      .posts {
+        height: 100%;
+        padding: 1em;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+
+      .post-link {
+        text-decoration: inherit;
+        color: inherit;
+        width: 360px;
+      }
+      .post-link section {
+        padding: 10px;
+        margin-bottom: 1.4em;
+        transition: all 0.2s;
+      }
+      .post-link section:hover {
+        transform: translate3d(0, -8px, 0);
+      }
+      .post-link .title {
+        font-size: 1.2em;
+        margin: 0;
+      }
+      .post-link .description {
+        font-size: 0.9em;
+      }
+      .post-link .date {
+        font-size: 0 9em;
+        opacity: 0.6;
+      }
+
+      @media screen and (max-width: 660px) {
+        .intro {
+          min-width: 100%;
+          width: 100%;
+          padding-left: 1em;
+          padding-right: 1em;
+        }
+        .homewrapper {
+          flex-direction: column;
+        }
+
+        .posts {
+          flex-wrap: nowrap;
+        }
+      }
+    </style>
+  </body>
+</html>

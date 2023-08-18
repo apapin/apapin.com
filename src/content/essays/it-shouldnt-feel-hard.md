@@ -3,14 +3,14 @@ title: "it shouldn't feel hard"
 description: "a reminder to myself that we tolerate too much, and also not enough."
 created: 2023-02-19
 updated: 2023-07-02
-tags: ["essay", "principle", "fragment", "life"]
+tags: ["principle", "fragment", "life"]
 ---
 
 I think we have come to tolerate both too much and not enough.
 
 There is a crisis around our growing inability to handle negative experiences. We've built so many systems of convenience that we made ourselves allergic to discomfort, so timid that we rarely dare to pursue what we want.
 
-On the other side, there is a hustle culture and its cousins. We internalize that big things require big efforts, relentless dedication, and self-sacrifice. The underlying fallacy is that the rewards are proportional to how hard it was to get there. And so we bestow value to the grind. It's true in some circumstances, but not always. We have built a narrative to justify our worst instincts of repression, frustration, self-censorship, restraint, and renunciation. We refuse to think about how much better things could be, because staring at it makes our head spins. Unable to deal with the discomfort of exploration, we enter exploitation mode by default. 
+On the other side, there is a hustle culture and its cousins. We internalize that big things require big efforts, relentless dedication, and self-sacrifice. The underlying fallacy is that the rewards are proportional to how hard it was to get there. And so we bestow value to the grind. It's true in some circumstances, but not always. We have built a narrative to justify our worst instincts of repression, frustration, self-censorship, restraint, and renunciation. We refuse to think about how much better things could be, because staring at it makes our head spins. Unable to deal with the discomfort of exploration, we enter exploitation mode by default.
 
 The potential for self-sabotage is colossal. When stuck in a bad situation, the easiest way to avoid discomfort is to keep still. Bias towards the status quo isn't new, but our unwillingness to confront it strengthens it. And then, we can rationalize our inaction by convincing ourselves that any suffering caused by a bad situation must be a sign of being on a path worthy to pursue.
 

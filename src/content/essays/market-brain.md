@@ -2,7 +2,7 @@
 title: "market brain"
 description: "someone explain to me the neuroscience of supply and demand"
 created: 2023-03-11
-tags: ["essay", "fragment"]
+tags: ["fragment"]
 ---
 
 Being french gives you great appreciation for the virtues of markets. Frédéric Bastiat long gone (and completely forgotten), the perverse economic incentives and well-meaning subsidies ending in disaster are our bread and butter. Giant stacks of tax money are burned for little to no results. Politicians accurately praising markets for what they're good are a minority in virtually every party.

@@ -2,7 +2,7 @@
 title: "resummoning my inner child"
 description: "Where did that early teen vibe go exactly?"
 created: 2023-02-27
-tags: ["essay", "fragment", "life", "principle"]
+tags: ["fragment", "life", "principle"]
 ---
 
 I'm sure therapists would have a field day on that one, but as I hit my thirties, I'm genuinely puzzled by how much of my self-improvement work consists of attempts at reverting to a child.
