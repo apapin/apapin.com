@@ -3,12 +3,22 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import Date from "../components/Date.astro";
+import * as R from "ramda";
 
 import { compareAsc } from "date-fns";
 import { getCollection } from "astro:content";
-const posts = (await getCollection("essays")).sort(
-  (a, b) => -compareAsc(a.data.created, b.data.created)
+const posts = (await getCollection("essays"))
+  .sort((a, b) => -compareAsc(a.data.created, b.data.created))
+  .filter((p) => !p.data.tags.includes("no-index"));
+const tags = R.uniq(posts.flatMap((p) => p.data.tags));
+
+const tagsOccurences = R.mergeAll(
+  tags.map((tag) => ({
+    [tag]: posts.filter((p) => p.data.tags.includes(tag)).length,
+  }))
 );
+
+const sortedTags = R.sortBy((tag) => -tagsOccurences[tag], tags);
 ---
 
 <!DOCTYPE html>
@@ -34,85 +44,80 @@ const posts = (await getCollection("essays")).sort(
               href="https://www.twitter.com/charmide">the twitter</a
             >.
           </p>
+          <hr />
+          <h2>Tags</h2>
+          <section class="tags-list">
+            {
+              sortedTags.map((tag) => (
+                <div class="tag">
+                  <span class="label">{tag}</span>
+                  <span class="number">
+                    {posts.filter((p) => p.data.tags.includes(tag)).length}
+                  </span>
+                </div>
+              ))
+            }
+          </section>
         </section>
         <section class="posts">
-          <h1>Essays</h1>
-          <p class="section-desc">
-            Stories, threads of ideas, and long-writing
-          </p>
-
           {
-            posts
-              .filter((p) => p.data.tags.includes("essay"))
-              .map((post) => (
-                <a href={`/on/${post.slug}/`} class="post-link">
-                  <section>
-                    <h3 class="title">{post.data.title}</h3>
-                    <span class="date">
-                      <Date date={post.data.created} />
-                    </span>
-                    · <span class="description">{post.data.description}</span>
-                  </section>
-                </a>
-              ))
-          }
-        </section>
-        <section class="posts">
-          <h1>Notes</h1>
-          <p class="section-desc">
-            Units of knowledge, concepts and ideas I keep coming back to.
-          </p>
-          {
-            posts
-              .filter((p) => p.data.tags.includes("note"))
-              .map((post) => (
-                <a href={`/on/${post.slug}/`} class="post-link">
-                  <section>
-                    <h3 class="title">{post.data.title}</h3>
-                    <span class="date">
-                      <Date date={post.data.created} />
-                    </span>
-                    · <span class="description">{post.data.description}</span>
-                  </section>
-                </a>
-              ))
+            posts.map((post) => (
+              <a href={`/on/${post.slug}/`} class="post-link">
+                <section>
+                  <h3 class="title">{post.data.title}</h3>
+                  <span class="date">
+                    <Date date={post.data.created} />
+                  </span>
+                  · <span class="description">{post.data.description}</span>
+                </section>
+              </a>
+            ))
           }
         </section>
       </div>
     </main>
     <style>
+      * {
+        box-sizing: border-box;
+      }
+
       .homewrapper {
         margin: 0 10px;
         padding: 0 1em;
+        position: relative;
 
-        display: grid;
-        grid-template-columns: 340px 340px 340px;
-        grid-gap: 2em;
+        display: flex;
       }
 
-      .homewrapper section {
-        width: 100%;
+      .intro {
+        min-width: 340px;
+        width: 340px;
+        padding-left: 1em;
+        padding-right: 1em;
       }
 
-      @media (max-width: 1001px) {
-        .homewrapper {
-          margin: auto;
-          width: 596px;
-          grid-template-columns: 1fr;
-        }
+      .tags-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3px;
       }
 
-      .section-desc {
-        margin-top: -20px;
-        font-size: 0.9em;
-        opacity: 0.6;
+      .posts {
+        height: 100%;
+        padding: 1em;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
       }
 
       .post-link {
         text-decoration: inherit;
         color: inherit;
+        width: 360px;
       }
       .post-link section {
+        padding: 10px;
         margin-bottom: 1.4em;
         transition: all 0.2s;
       }
@@ -127,7 +132,7 @@ const posts = (await getCollection("essays")).sort(
         font-size: 0.9em;
       }
       .post-link .date {
-        font-size: 0.9em;
+        font-size: 0 9em;
         opacity: 0.6;
       }
     </style>

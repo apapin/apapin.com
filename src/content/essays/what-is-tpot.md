@@ -3,7 +3,7 @@ title: "what is tpot?"
 description: "inquisitive minds want to know"
 created: 2023-05-03
 updated: 2023-05-04
-tags: ["internet"]
+tags: ["internet", "no-index"]
 ---
 
 As a cold-hearted killjoy, I have set forward the task of cracking the greatest mystery of our time and disenchanting the world by explaining away the enigma that has been on the Bluesky collective mind for what now feels like decades: what is TPOT?
