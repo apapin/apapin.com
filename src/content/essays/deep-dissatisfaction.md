@@ -1,6 +1,6 @@
 ---
 title: "deep dissatisfaction"
-description: "..."
+description: "probing a mood floor"
 created: 2023-08-16
 tags: ["rant", "life"]
 ---
