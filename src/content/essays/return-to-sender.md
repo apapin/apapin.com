@@ -71,7 +71,7 @@ The moment I needed that bravado I have worked so hard for was the moment it was
 
 The pullback struck my confidence pretty hard, and put me in a position I knew I could not come back from, because I'd now be radiating insecurity and worry and anxiety and awkwardness, instead of being the charming and jaunty self I can be otherwise. 
 
-The call went about as badly as it could have gone, it felt like the kind of worst case scenario that you'd come up with because of anxiety but that would never happen, and it buried any potential for romance. 
+The call went about as badly as it could have gone, it felt like the kind of worst case scenario that you'd come up with because of anxiety but that would never happen. It buried any potential for romance. 
 
 ### cleanup
 
@@ -79,7 +79,7 @@ She tried to put words on why, which never goes well in my experience. The reaso
 
 It could have been me doing a u-turn on our affections. In fact I did that just before with someone else I had started seeing before she came into my life. Powerful feelings are fickle, who knows what lies beyond them? They should not constitute promise or future obligations, and I did not. No matter, it didn't make it any less painful.  
 
-I was already in a bad mood for ~general reasons~, and that episode  sent me quite down the rabbit hole, with some particularly gloomy thoughts. That mad dash, the burning of a candle, which I knew I'd look back fondly on one day, still left me reeling. 
+I was already in a bad mood for ~general reasons~, and that episode sent me down quite the rabbit hole, with some particularly gloomy thoughts. That mad dash, the burning of a candle, which I knew I'd look back fondly on one day, still left me reeling. 
 
 In the instant of her rejection, I felt a rush of inadequacy, I felt sharply everything I wish was going better in my life. All the little things I haven't done, all the moments spent avoiding. I see all the things I didn't give proper care to, all the things I left drifting in the last few months and years into a state of deep dissatisfaction. The clarity is binding.
 
