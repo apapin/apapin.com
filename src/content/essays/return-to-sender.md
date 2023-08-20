@@ -9,7 +9,7 @@ tags: ["love", "essay"]
  
 I remember getting invited to the birthday party of a girl i liked late in high school. I remember how she looked that day, how cute in her costume. Her saying hi to me. I remember nothing else. I fled the scene, left early. I didn't try anything, didn't say anything. Years passed by and not a single word was said.  
   
-A few years later, I remember hanging out with two females friends. One prods me to give a compliment about how well and dressed up the other one is. They exchange knowing looks. I crack à joke to deflect, make some passing remark. The moment dies. I only understand what was expected of me later on.  
+A few years later, I remember hanging out with two females friends. One prods me to give a compliment about how good looking and dressed up the other one is. They exchange knowing looks. I crack a joke to deflect, make some passing remark. The moment dies. I only understand what was expected of me later on.  
   
 Another few years later, I met a girl on the internet. After a few months of exchanging affection over voice calls, I traveled to the other side of the country for work, she happened to be there. We didn't know what we looked like or each other's last names. We met up, had dinner. It went well, I thought. On our second date, she suddenly started crying. I held her in my arms, confused. She had thought I didn't like her because I didn't make moves on our first date, felt like she had failed. I did my best to dispel that impression during the rest of my trip.  
   
