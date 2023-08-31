@@ -50,9 +50,14 @@ body {
 	text-rendering: optimizeLegibility;
 }
 :root {
-	font-family: 'Libre Baskerville', serif;
-	font-weight: 400;
+	font-family: 'Nunito Sans', sans-serif;
+	font-weight: 500;
+	font-size: 20px;
+}
+
+blockquote {
 	font-size: 18px;
+	font-family: "Libre Baskerville"
 }
 
 h1,
@@ -67,13 +72,14 @@ b {
 
 
 /* Colors */
+/* #271629, #2d1b31, #73589c (muted text) */
 :root { 
 	--fg: #c792ea;
 	--fg-muted1: rgba(199, 146, 234, 0.593);
 	--fg-muted: rgba(141, 67, 190, 1);
 	--fg-body: white;
 	--bg-alt: #130c18;
-	--bg: #1b1222;
+	--bg: #271629;
 	--bg-darkest: black;
 	--accent: #ffeb95;
 	--accent2: #7fdbca;

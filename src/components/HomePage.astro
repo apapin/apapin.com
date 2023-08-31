@@ -110,7 +110,7 @@ const sortedTags = R.sortBy((tag) => -tagsOccurences[tag], tags);
       }
 
       .tag {
-        background-color: black;
+        background-color: var(--bg-alt);
         border: 1px solid gray;
         border-radius: 100px;
         padding: 8px 12px 8px 12px;
@@ -124,7 +124,6 @@ const sortedTags = R.sortBy((tag) => -tagsOccurences[tag], tags);
       }
 
       .tag.active {
-        background-color: black;
         border: 1px solid var(--accent);
       }
       .tag.active .label {
