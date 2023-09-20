@@ -2,7 +2,7 @@
 title: "deep dissatisfaction"
 description: "probing a mood floor"
 created: 2023-08-16
-tags: ["rant", "life"]
+tags: ["rant", "life", "no-index"]
 ---
 
 A boiling frog of a life. You had nice things going, once. And then little by little everything eroded. People came and went. Occupations. It all turned bad little by little, while you were not paying attention.
