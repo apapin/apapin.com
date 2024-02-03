@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 import { compareAsc } from "date-fns";
 import HomePage from "../components/HomePage.astro";
-const posts = (await getCollection("essays"))
+const posts = (await getCollection("writing"))
   .sort((a, b) => -compareAsc(a.data.created, b.data.created))
   .filter((p) => !p.data.tags.includes("no-index"));
 ---

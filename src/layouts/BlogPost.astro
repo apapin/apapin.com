@@ -1,22 +1,17 @@
 ---
-import type { CollectionEntry } from "astro:content";
-import Date from "../components/Date.astro";
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
 import slugify from "@sindresorhus/slugify";
-import numbro from "numbro";
+import type { CollectionEntry } from "astro:content";
+import BaseHead from "../components/BaseHead.astro";
+import Date from "../components/Date.astro";
 
-type Props = CollectionEntry<"essays">["data"];
+type Props = CollectionEntry<"writing">["data"];
 const {
   title,
   description,
   created,
-  tags,
   updated,
   previewImage,
   heroImage,
-  numberOfWords,
-  minutesRead,
   headings,
 } = Astro.props;
 ---
@@ -27,13 +22,12 @@ const {
   </head>
 
   <body>
-    <Header title={title} />
     <main>
-      <section class="contentwrapper">
         <article>
+          <div class="px-4 p-2">
           {heroImage && <img width={720} height={360} src={heroImage} alt="" />}
-          <h1 class="title" id={slugify(title)}>{title}</h1>
-          <span class="subdued">
+          <h1 class="text-6xl font-title pb-2" id={slugify(title)}>{title}</h1>
+          <span>
             {
               created && !updated && (
                 <span>
@@ -49,14 +43,13 @@ const {
                 </span>
               )
             }
-            <!-- {(<span> · {minutesRead}</span>)} -->
-            <!-- {tags && <p class="tags"> {tags.map((tag) => <span class="tag">#{tag}</span>)}</p>} -->
-          </span>
+         </span>
           <p><i>{description}</i></p>
+        </div>
           <hr />
           {
             headings.length > 0 && (
-              <div class="toc">
+              <div class="toc hidden">
                 <ol>
                   {headings.map((heading) => (
                     <li>
@@ -67,46 +60,17 @@ const {
               </div>
             )
           }
-          <slot />
-          <!-- <hr /> -->
-          <div class="go-up-container"></div>
+          <div class="pt-4 pb-12 prose prose-headings:font-title prose-lg mx-auto font-serif px-4">
+            <slot />
+          </div>
         </article>
-      </section>
     </main>
     <style>
-      .title {
-        font-size: 2em;
-        margin: 0.25em 0 0;
-      }
-      .subdued {
-        opacity: 0.7;
-        font-size: 14px;
-        font-style: italic;
-      }
-      .toc {
-        /* border: 1px solid red; */
-        width: 230px;
-        float: left;
-        margin-right: 20px;
-        padding: 5px;
-        background-color: var(--bg-alt);
-        border: 1px solid var(--separator-color);
+      * {
+
       }
 
-      @media (max-width: 500px) {
-        .toc {
-          width: 100%;
-          margin-bottom: 24px;
-        }
-      }
 
-      .go-up-container {
-        display: flex;
-        padding-bottom: 30px;
-      }
-      .go-up-container a {
-        margin: 0 0.3em;
-      }
     </style>
   </body>
 </html>
